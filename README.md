@@ -26,9 +26,10 @@ To check the script runs open Volumio (we are assuming it is at volumio.local on
 ## Setting up the script to run at start-up
 Now that your ```volumio2slack.sh``` file is configured and working the last step is to have it running in the background on your mac. Using launchctl set this up as a daemon to run at starting using the following 3 steps:
 
-1. Use the template .plist file in the repo ```volumio2slack.plist``` to set-up for your system (ie edit line 8 to point to the location where you will deploy your script).
-2. Place the .plist file in ```~/Library/LaunchAgents```
-3. Re log in (or run manually via ```launchctl load volumio2slack.plist```)
+1. The script assumes you have [jq](https://stedolan.github.io/jq/) installed ( ```brew install jq``` )
+2. Use the template .plist file in the repo ```volumio2slack.plist``` to set-up for your system (ie edit line 8 to point to the location where you will deploy your script).
+3. Place the .plist file in ```~/Library/LaunchAgents```
+4. Re log in (or run manually via ```launchctl load volumio2slack.plist```)
 
 ## File Summary
 
